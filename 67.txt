@@ -1,0 +1,18 @@
+Attaching to app-1, db-1
+db-1  | 
+db-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db-1  | 
+app-1  | Starts server running
+app-1  | [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+app-1  |  - using env:	export GIN_MODE=release
+app-1  |  - using code:	gin.SetMode(gin.ReleaseMode)
+app-1  | 
+app-1  | [GIN-debug] POST   /api/                     --> ypp/internal/transport/http.(*Handler).NewChannel-fm (1 handlers)
+app-1  | [GIN-debug] GET    /api/                     --> ypp/internal/transport/http.(*Handler).GetChannel-fm (1 handlers)
+app-1  | [GIN-debug] PATCH  /api/:id                  --> ypp/internal/transport/http.(*Handler).PatchChannel-fm (1 handlers)
+app-1  | [GIN-debug] DELETE /api/:id                  --> ypp/internal/transport/http.(*Handler).DeleteChannel-fm (1 handlers)
+app-1  | [GIN-debug] POST   /auth/sing-up             --> ypp/internal/transport/http.(*Handler).SingUP-fm (1 handlers)
+app-1  | [GIN-debug] POST   /auth/sing-in             --> ypp/internal/transport/http.(*Handler).SingIN-fm (1 handlers)
+app-1  | [GIN-debug] GET    /ping                     --> ypp/internal/transport/http.(*Handler).PingHandler-fm (1 handlers)
+[Kapp-1 exited with code 143
+[Kdb-1 exited with code 0

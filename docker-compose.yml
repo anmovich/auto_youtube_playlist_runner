@@ -1,0 +1,23 @@
+services: 
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: "anme"
+      POSTGRES_PASSWORD: "1234"
+    ports:
+      - 5432:5432
+    volumes:
+      - db:/var/lib/postgresql
+  app:
+    build:
+      context: .
+    restart: always
+    volumes:
+      - .:/server
+    ports:
+      - 6767:6767
+    depends_on:
+      - db
+volumes:
+  db:
