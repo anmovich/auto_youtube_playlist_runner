@@ -26,5 +26,9 @@ func (h *Handler)InitRoute() *gin.Engine{
 		auth.POST("/sign-in", h.SingIN)
 	}
 	router.GET("/ping", h.PingHandler)
+	debug := router.Group("/debug")
+	{
+		debug.POST("/clear_locked", h.Clear_lock)
+	}
 	return router
 }

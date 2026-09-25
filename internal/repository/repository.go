@@ -8,8 +8,12 @@ import (
 )
 
 type Authorization interface{
-	CreateUser(models.User, []byte) (int, error)
-	GetPass(string) (*string, *string, error)
+	CreateUser(models.User) (int, error)
+	GetUserPass(string) (string, error)
+	FailedLogin(username string)
+	CheckLockedUntil(username string) bool
+	// DEBUG -----------------------------------------------
+	ClearLocked(username string) 	
 }
 
 type ChannelLink interface{

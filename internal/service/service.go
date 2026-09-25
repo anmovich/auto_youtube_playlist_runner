@@ -7,7 +7,8 @@ import (
 
 type Authorization interface{
 	CreateUser(*models.User) (int, error)
-	SignIn()
+	SignIN(usr *models.UserSingInUsername) (error) 
+	ClearLocked(username string)
 }
 
 

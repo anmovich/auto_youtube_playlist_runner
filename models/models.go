@@ -7,3 +7,8 @@ type User struct{
 	Password string `json:"password" `
 	Email string `json:"email"`
 }
+
+type UserSingInUsername struct{
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
